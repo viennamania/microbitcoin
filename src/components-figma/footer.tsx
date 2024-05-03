@@ -69,27 +69,14 @@ Copyright ⓒ 디보이드 All Rights Reserved
 
               <div className="flex flex-col items-start justify-start ">
                 <div className="flex flex-row items-center justify-center">
-                  <div className=" w-9 ">상호명</div><div>: 디보이드</div>
+                  <div className=" w-9 ">상호명</div><div>: OnePay</div>
                 </div>
                 <div className="flex flex-row items-center justify-center">
-                  <div className="w-9">대표자</div><div>: 정보영</div>
-                </div>
-                <div className="flex flex-row items-center justify-center">
-                  <div className="w-9">주소</div><div>: 서울 강서구 강서로47길 165 901-368호</div>
+                  <div className="w-9">주소</div><div>: </div>
                 </div>
 
               </div>
 
-
-              
-              <p className="mt-0  flex-col xl:flex-row hidden xl:flex ">
-                <span>사업자등록번호 : 359-17-02121&nbsp;&nbsp;|&nbsp;&nbsp;통신판매업신고번호 : 제 2023-서울강서-3713호</span>
-              </p>
-
-              <p className="mt-0  flex-col flex xl:hidden ">
-                <div>사업자등록번호 : 359-17-02121</div>
-                <div>통신판매업신고번호 : 제 2023-서울강서-3713호</div>
-              </p>
       
 
 
@@ -97,7 +84,7 @@ Copyright ⓒ 디보이드 All Rights Reserved
               <div className="flex flex-col items-start justify-start ">
 
                 <div className="flex flex-row items-center justify-center">
-                  <div className="w-9">이메일</div><div>: doingdoit.official@gmail.com</div>
+                  <div className="w-9">이메일</div><div>: microbitcoin@gmail.com</div>
                 </div>
               </div>
 
@@ -107,7 +94,7 @@ Copyright ⓒ 디보이드 All Rights Reserved
 
         </div>
         <div className="relative text-xs text-grey-c">
-          Copyright Ⓒ 디보이드 All Rights Reserved
+          Copyright Ⓒ OnePay All Rights Reserved
         </div>
       </div>
 

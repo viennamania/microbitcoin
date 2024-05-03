@@ -12,7 +12,7 @@ import { NextResponse, NextRequest } from 'next/server';
 /////import { memberData } from '@/data/doingdoit/user/member-data';
 
 
-///import { checkEmailRegistered } from '@/lib/api/user';
+import { checkEmailRegistered } from '@/lib/api/user';
 
 import _ from 'lodash';
 
@@ -27,16 +27,14 @@ export const GET = async (req: NextRequest, res: NextResponse) => {
 
   const _email  = req.nextUrl.searchParams.get('_email');
 
+  if (_.isEmpty(_email)) {
+    return NextResponse.json('Email is required', { status: 400 });
+  }
+
   
-
-
-  /*
   const results = await checkEmailRegistered(
     _email as string, 
   );
-  */
-
-  const results = 'checkEmailRegistered';
   
 
 

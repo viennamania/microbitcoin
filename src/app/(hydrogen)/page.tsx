@@ -66,15 +66,11 @@ export default function HomePage() {
   */
 
 
-  /*
+  
   return <Dashboard />;
-  */
+  
 
-  return (
-    <div>
-      hello world
-    </div>
-  )
+
   
 
 }

@@ -95,7 +95,7 @@ export default function Dashboard() {
     <div className=" bg-dark sticky top-0 z-50 ">
 
       <Top1
-        logo="/usermain/images/logo2.svg"
+        logo="/usermain/images/logo.png"
         topBackgroundColor="unset"
         topBorderBottom="unset"
         topBoxSizing="unset"
@@ -124,8 +124,9 @@ export default function Dashboard() {
       <div className="self-stretch flex flex-col items-center justify-start ">
 
       
-
+        {/*
         <FrameComponentHome />
+        */}
         
 
         {/*
@@ -146,10 +147,13 @@ export default function Dashboard() {
         
         <ComponentBoardHome />
 
-        
+        {/*
         <ComponentHealthHome />
+        */}
 
+        {/*
         <ComponentSurveyHome />
+        */}
         
 
       </div>
@@ -187,7 +191,7 @@ export default function Dashboard() {
               alt=""
               src="/homefill.svg"
             />
-            <b className="relative">홈</b>
+            <b className="relative">Home</b>
           </Link>
 
 
@@ -197,7 +201,7 @@ export default function Dashboard() {
               className="m-0 w-6 h-6 relative overflow-hidden shrink-0"
               type="checkbox"
             />
-            <b className="relative">홈</b>
+            <b className="relative">Home</b>
           </div>
               */}
 

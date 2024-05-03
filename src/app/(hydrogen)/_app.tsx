@@ -40,9 +40,9 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     console.log('pageid', pageid);
 
 
-    const title = 'Doingdoit';
-    const description = 'Doingdoit';
-    const image = 'https://doingdoit.com/logo.png';
+    const title = 'OnePay';
+    const description = 'OnePay';
+    const image = 'https://microbitcoin.vercel.app/logo.png';
 
 
 

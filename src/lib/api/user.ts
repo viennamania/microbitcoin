@@ -2386,3 +2386,33 @@ export async function getAllFeedbackWriterList(
 
 
 }
+
+
+
+
+// checkEmailRegistered
+
+export async function checkEmailRegistered (
+  _email: string,
+): Promise<UserProps | null> {
+
+  console.log('checkEmailRegistered _email: ' + _email);
+
+  const client = await clientPromise;
+  const collection = client.db('vienna').collection('users');
+
+  // regType is 'email' and status is 'active'
+
+  const results = await collection.findOne<UserProps>(
+    { email: _email, regType: 'email', status: 'active' },
+    { projection: { _id: 0, emailVerified: 0 } }
+  );
+
+  ///console.log('checkEmailRegistered results: ' + results);
+
+  return results;
+
+
+    
+
+}

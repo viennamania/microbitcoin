@@ -239,7 +239,7 @@ const ComponentBoardHome: NextPage = () => {
                 className=" no-underline flex"
               >
 
-                <Goto boardName="자유게시판" />
+                <Goto boardName="Free Boards" />
 
               </Link>
             </motion.div>
@@ -250,9 +250,7 @@ const ComponentBoardHome: NextPage = () => {
             {/* when lg screen  break line */}
 
             <div className="self-stretch relative flex flex-col xl:flex-row gap-1 text-xl xl:text-17xl font-jalnan text-left">
-              <span>이주의 인기글을</span>
-              <span className="xl:pl-1">만나보세요!</span>
-
+              <span>Let it go!</span>
             </div>
 
           </div>

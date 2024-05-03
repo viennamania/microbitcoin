@@ -282,13 +282,12 @@ const ComponentDietHome: NextPage = () => {
                   href="/usermain/feeds"
                   className=" no-underline flex"
                   >
-                  <Goto boardName="피드" />
+                  <Goto boardName="Feeds" />
                 </Link>
               </motion.div>
 
               <div className="self-stretch relative flex flex-col xl:flex-row gap-1 text-xl xl:text-17xl font-jalnan text-left">
-                <span>당신의 식단을 전문가가</span>
-                <span className="xl:pl-1">분석해 드려요!</span>
+                <span>Show me the money!</span>
               </div>
             
 

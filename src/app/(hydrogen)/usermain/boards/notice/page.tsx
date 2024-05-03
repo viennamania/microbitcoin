@@ -531,7 +531,7 @@ export default function NoticePage() {
         alt=""
         src="/homefill.svg"
       />
-      <b className="relative">홈</b>
+      <b className="relative">Home</b>
     </Link>
     */}
 
@@ -544,7 +544,7 @@ export default function NoticePage() {
         alt=""
         src="/homeline.svg"
       />
-      <b className="relative">홈</b>
+      <b className="relative">Home</b>
     </Link>
 
 
@@ -554,7 +554,7 @@ export default function NoticePage() {
         className="m-0 w-6 h-6 relative overflow-hidden shrink-0"
         type="checkbox"
       />
-      <b className="relative">홈</b>
+      <b className="relative">Home</b>
     </div>
         */}
 

@@ -1,46 +1,4 @@
 import clientPromise from '@/lib/mongodb';
-import { remark } from 'remark';
-import remarkMdx from 'remark-mdx';
-import { serialize } from 'next-mdx-remote/serialize';
-import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
-import { create, random, update } from 'lodash';
-import { day } from 'date-arithmetic';
-import { D } from '@uploadthing/react/types-f6db134c';
-import { m } from 'framer-motion';
-import { string } from 'prop-types';
-import exp from 'constants';
-import { use } from 'react';
-import { da, en } from '@faker-js/faker';
-import { data } from '@/data/doingdoit/board/data';
-import { u } from 'uploadthing/dist/types-e8f81bbc';
-import { availableParallelism } from 'os';
-import { avatarClasses } from '@mui/material';
-import { lookup } from 'dns';
-
-import pool, {connect, query} from '@/config/db';
-import MealFood from '@/components/doingdoit/statistics/mealFood';
-import { exit } from 'process';
-import { sleep } from 'react-query/types/core/utils';
-import { AiOutlineConsoleSql } from 'react-icons/ai';
-
-
-
-
-/*
-     mealTime: '아침',
-    mealFood: '케잌',
-    mealAmount: '적게',
-    mealSpeed: '천천히',
-
-    scrapCount: 4,
-    likeCount: 13,
-    commentCount: 67,
-    viewCount: 44,
-    rating: [5, 5, 2, 3],
-
-    feedbackYn: 'N',
-*/
-
 
 export interface FeedProps {
   id: string;
@@ -488,53 +446,6 @@ export async function registerOne (
 
 
 
-    const connection = await connect();
-
-    try {
-
-
-          // get point from point_category table
-          const pointCategoryQuery = `
-          SELECT point FROM point_category WHERE category = ?
-          `;
-          const pointCategoryValues = ['feedPost'];
-
-          const [pointCategoryRows, pointCategoryFields] = await connection.query(pointCategoryQuery, pointCategoryValues) as any;
-
-          if (pointCategoryRows[0]) {
-
-            const point = pointCategoryRows[0].point;
-
-            console.log('point: ' + point);
-
-            // insert point history
-            const pointHistoryQuery = `
-            INSERT INTO points
-            (userId, point, title, createdAt)
-            VALUES (?, ?, ?, ?)
-            `;
-            const pointHistoryValues = [userId, point, 'feedPost', new Date()];
-
-            await connection.query(pointHistoryQuery, pointHistoryValues);
-
-          }
-
-
-          connection.release();
-
-    } catch (error) {
-            
-          connection.release();
-      
-          console.error('getTop error: ', error);
-          
-    }
-
-
-
-
-
-
 
 
 
@@ -942,61 +853,7 @@ export async function updateOne (
     if (results) {
 
 
-
-
-      ////console.log('getFeedById results: ' + JSON.stringify(results[0]));
-
-      const userId = results[0].userId;
-
-
-      const connection = await connect();
-      const [rows, fields] = await connection.query(
-        'SELECT nickname, avatar FROM users WHERE id = ?',
-        [userId]
-      ) as any;
-  
-      if (rows[0]) {
-
-        console.log('rows[0].nickname: ' + rows[0].nickname);
-        console.log('rows[0].avatar: ' + rows[0].avatar);
-
-        results[0].nickname = rows[0].nickname;
-        results[0].avatar = rows[0].avatar;
-      }
-
-      // feedbackWriterId
-
-      const feedbackWriterId = results[0].feedbackWriterId;
-      const [feedbackWriterRows, feedbackWriterFields] = await connection.query(
-        'SELECT nickname, avatar FROM users WHERE id = ?',
-        [feedbackWriterId]
-      ) as any;
-
-      if (feedbackWriterRows[0]) {
-
-        console.log('feedbackWriterRows[0].nickname: ' + feedbackWriterRows[0].nickname);
-        console.log('feedbackWriterRows[0].avatar: ' + feedbackWriterRows[0].avatar);
-
-        results[0].feedbackWriterNickname = feedbackWriterRows[0].nickname;
-        results[0].feedbackWriterAvatar = feedbackWriterRows[0].avatar;
-      }
-     
-
-
-
-      connection.release();
-
-      
-
-
-      // change results[0].nickname and avatar t
-
-
-
-
       return {
-
-
 
         ...results[0],
         ///////bioMdx: await getMdxSource(results.bio || placeholderBio)
@@ -1639,58 +1496,7 @@ export async function getLikeCountByEmail(
 
 
 
-
-
-    const connection = await connect();
-
-    // copy results to updatedResults
-    let updatedResults = [
-      ...results,
-    ];
-
-    for (let index = 0; index < results.length; index++) {
-
-      const result = results[index];
-
-      const userId = result.userId;
-      
-      const [rows, fields] = await connection.query(
-        'SELECT nickname, avatar FROM users WHERE id = ?',
-        [userId]
-      ) as any;
-  
-      if (rows[0]) {
-
-        updatedResults[index].nickname = rows[0].nickname;
-        updatedResults[index].avatar = rows[0].avatar;
-      }
-
-
-      const feedbackWriterId = result.feedbackWriterId;
-      const [feedbackWriterRows, feedbackWriterFields] = await connection.query(
-        'SELECT nickname, avatar FROM users WHERE id = ?',
-        [feedbackWriterId]
-      ) as any;
-
-      if (feedbackWriterRows[0]) {
-
-        ///console.log('feedbackWriterRows[0].nickname: ' + feedbackWriterRows[0].nickname);
-        //console.log('feedbackWriterRows[0].avatar: ' + feedbackWriterRows[0].avatar);
-
-        updatedResults[index].feedbackWriterNickname = feedbackWriterRows[0].nickname;
-        updatedResults[index].feedbackWriterAvatar = feedbackWriterRows[0].avatar;
-      }
-
-    }
-
-    connection.release();
-
-
-
-
-
-
-    return updatedResults;
+    return results;
 
 
 
@@ -1904,90 +1710,6 @@ export async function getLikeCountByEmail(
       );
 
 
-      ////////console.log('results: ' + JSON.stringify(results));
-
-
-
-      
-
-      /*
-      results.forEach(async (result, index) => {
-
-        const userId = result.userId;
-
-        console.log('userId: ' + userId);
-
-
-        const connection = await connect();
-        const [rows, fields] = await connection.query(
-          'SELECT nickname, avatar FROM users WHERE id = ?',
-          [userId]
-        ) as any;
-        
-        connection.release();
-    
-        if (rows[0]) {
-
-          console.log('rows[0].nickname: ' + rows[0].nickname);
-          console.log('rows[0].avatar: ' + rows[0].avatar);
-
-          results[index].nickname = rows[0].nickname;
-          results[index].avatar = rows[0].avatar;
-        }
-
-      } );
-      */
-
-
-      
-      const connection = await connect();
-
-      // copy results to updatedResults
-      let updatedResults = [
-        ...results,
-      ];
-  
-      for (let index = 0; index < results.length; index++) {
-  
-        const result = results[index];
-  
-        const userId = result.userId;
-        
-        const [rows, fields] = await connection.query(
-          'SELECT nickname, avatar FROM users WHERE id = ?',
-          [userId]
-        ) as any;
-    
-        if (rows[0]) {
-  
-          updatedResults[index].nickname = rows[0].nickname;
-          updatedResults[index].avatar = rows[0].avatar;
-        }
-  
-  
-        const feedbackWriterId = result.feedbackWriterId;
-        const [feedbackWriterRows, feedbackWriterFields] = await connection.query(
-          'SELECT nickname, avatar FROM users WHERE id = ?',
-          [feedbackWriterId]
-        ) as any;
-  
-        if (feedbackWriterRows[0]) {
-  
-          updatedResults[index].feedbackWriterNickname = feedbackWriterRows[0].nickname;
-          updatedResults[index].feedbackWriterAvatar = feedbackWriterRows[0].avatar;
-        }
-  
-      }
-  
-  
-      connection.release();
-  
-  
-      
-    
-
-
-
 
     
       
@@ -1996,7 +1718,7 @@ export async function getLikeCountByEmail(
         
         ////feeds: results,
 
-        feeds: updatedResults,
+        feeds: results,
 
         totalCount: totalCount,
       };
@@ -2311,58 +2033,11 @@ export async function getAll( {
 
 
 
-  const connection = await connect();
-
-  // copy results to updatedResults
-  let updatedResults = [
-    ...results,
-  ];
-
-  for (let index = 0; index < results.length; index++) {
-
-    const result = results[index];
-
-    const userId = result.userId;
-    
-    const [rows, fields] = await connection.query(
-      'SELECT nickname, avatar FROM users WHERE id = ?',
-      [userId]
-    ) as any;
-
-    if (rows[0]) {
-
-      updatedResults[index].nickname = rows[0].nickname;
-      updatedResults[index].avatar = rows[0].avatar;
-    }
-
-
-    const feedbackWriterId = result.feedbackWriterId;
-    const [feedbackWriterRows, feedbackWriterFields] = await connection.query(
-      'SELECT nickname, avatar FROM users WHERE id = ?',
-      [feedbackWriterId]
-    ) as any;
-
-    if (feedbackWriterRows[0]) {
-
-      ///console.log('feedbackWriterRows[0].nickname: ' + feedbackWriterRows[0].nickname);
-      //console.log('feedbackWriterRows[0].avatar: ' + feedbackWriterRows[0].avatar);
-
-      updatedResults[index].feedbackWriterNickname = feedbackWriterRows[0].nickname;
-      updatedResults[index].feedbackWriterAvatar = feedbackWriterRows[0].avatar;
-    }
-
-  }
-
-  connection.release();
-
-
-
-
   return {
     _id: '1',
     ////feeds: results,
 
-    feeds: updatedResults,
+    feeds: results,
 
 
     totalCount: resultsCount[0]?.count || 0,
@@ -2673,53 +2348,6 @@ export async function updateFeedbackById (
 
 
 
-
-    const connection = await connect();
-
-    try {
-
-
-          // get point from point_category table
-          // get feedLike point
-          const pointCategoryQuery = `
-          SELECT point FROM point_category WHERE category = ?
-          `;
-          const pointCategoryValues = ['feedLike'];
-
-          const [pointCategoryRows, pointCategoryFields] = await connection.query(pointCategoryQuery, pointCategoryValues) as any;
-
-          if (pointCategoryRows[0]) {
-
-            const point = pointCategoryRows[0].point;
-
-            console.log('point: ' + point);
-
-            const pointQuery = `
-            INSERT INTO points
-            (userId, point, title, createdAt) 
-            VALUES (?, ?, ?, ?)
-            `;
-            const pointValues = [userId, point, 'feedLike', new Date()];
-
-            await connection.query(pointQuery, pointValues);
-
-          }
-
-          connection.release();
-
-
-
-
-    } catch (error) {
-            
-          connection.release();
-      
-          console.error('getTop error: ', error);
-          
-    }
-
-
-    
 
 
 
@@ -3056,57 +2684,10 @@ export async function getAllByEmailScrap(
 
 
 
-  const connection = await connect();
-
-  // copy results to updatedResults
-  let updatedResults = [
-    ...results,
-  ];
-
-  for (let index = 0; index < results.length; index++) {
-
-    const result = results[index];
-
-    const userId = result.userId;
-    
-    const [rows, fields] = await connection.query(
-      'SELECT nickname, avatar FROM users WHERE id = ?',
-      [userId]
-    ) as any;
-
-    if (rows[0]) {
-
-      updatedResults[index].nickname = rows[0].nickname;
-      updatedResults[index].avatar = rows[0].avatar;
-    }
-
-
-    const feedbackWriterId = result.feedbackWriterId;
-    const [feedbackWriterRows, feedbackWriterFields] = await connection.query(
-      'SELECT nickname, avatar FROM users WHERE id = ?',
-      [feedbackWriterId]
-    ) as any;
-
-    if (feedbackWriterRows[0]) {
-
-      ///console.log('feedbackWriterRows[0].nickname: ' + feedbackWriterRows[0].nickname);
-      //console.log('feedbackWriterRows[0].avatar: ' + feedbackWriterRows[0].avatar);
-
-      updatedResults[index].feedbackWriterNickname = feedbackWriterRows[0].nickname;
-      updatedResults[index].feedbackWriterAvatar = feedbackWriterRows[0].avatar;
-    }
-
-  }
-
-  connection.release();
-
-
-
-
   ///return results;
 
 
-  return updatedResults;
+  return results;
 
 } 
 
@@ -4880,53 +4461,9 @@ export async function getAllForHome (
 
 
 
-    
-    const connection = await connect();
-
-    // copy results to updatedResults
-    let updatedResults = [
-      ...results,
-    ];
-
-    for (let index = 0; index < results.length; index++) {
-
-      const result = results[index];
-
-      const userId = result.userId;
-      
-      const [rows, fields] = await connection.query(
-        'SELECT nickname, avatar FROM users WHERE id = ?',
-        [userId]
-      ) as any;
   
-      if (rows[0]) {
 
-        updatedResults[index].nickname = rows[0].nickname;
-        updatedResults[index].avatar = rows[0].avatar;
-      }
-
-
-      const feedbackWriterId = result.feedbackWriterId;
-      const [feedbackWriterRows, feedbackWriterFields] = await connection.query(
-        'SELECT nickname, avatar FROM users WHERE id = ?',
-        [feedbackWriterId]
-      ) as any;
-
-      if (feedbackWriterRows[0]) {
-
-        ///console.log('feedbackWriterRows[0].nickname: ' + feedbackWriterRows[0].nickname);
-        //console.log('feedbackWriterRows[0].avatar: ' + feedbackWriterRows[0].avatar);
-
-        updatedResults[index].feedbackWriterNickname = feedbackWriterRows[0].nickname;
-        updatedResults[index].feedbackWriterAvatar = feedbackWriterRows[0].avatar;
-      }
-
-    }
-
-    connection.release();
-
-
-    return updatedResults;
+    return results;
 
 
 }
@@ -5673,102 +5210,10 @@ export async function getStats( {
 
 
 
-  const connection = await connect();
+ 
 
   try {
 
-    const query = `
-    SELECT * FROM users
-    WHERE
-    nickname IS NOT NULL
-
-    AND access->'$.access_feed' = true
-
-    ORDER BY createdAt DESC
-    `;
-
-    const values = [] as any;
-
- 
-    const [rows, fields] = await connection.query(query, values) as any
-
-    connection.release();
-
-    /*
-
-    if (rows) {
-        return rows
-    } else {
-        return [];
-    }
-    */
-
- 
-    //const columnNames = rows.map((row: any) => row.nickname) as string[];
-
-    // feedbackWriters is array of id and nickname
-
-    const feedbackWriters = rows as any;
-
-
-    // columnNames is array of nickname
-
-
-    /*
-    const results = [
-
-      {"mealDate":"2024-02-12", "영양사1": 3, "영양사2": 0, "영양사3": 2, "영양사4": 1, "영양사5": 0},
-      {"mealDate":"2024-02-13", "영양사1": 0, "영양사2": 0, "영양사3": 0, "영양사4": 0, "영양사5": 0},
-      {"mealDate":"2024-02-14", "영양사1": 0, "영양사2": 0, "영양사3": 0, "영양사4": 0, "영양사5": 0},
-  
-    ];
-    */
-
-    ///const results = [] as any;
-
-    /*
-    for (let i = 0; i < 10; i++) {
-
-      const result = {} as any;
-
-      
-      //result.mealDate = '2024-02-12';
-      // mealData is mealDate
-      // mealData is '2024-02-12', '2024-02-13', '2024-02-14', '2024-02-15', '2024-02-16'
-
-      result.mealDate = mealDate;
-
-
-
-      for (let j = 0; j < columnNames.length; j++) {
-
-        result[columnNames[j]] = Math.floor(Math.random() * 10);
-
-      }
-
-      results.push(result);
-
-    }
-    */
-
-
-    /*
-        const results = [
-
-      {"mealDate":"2024-02-12", "영양사1": 3, "영양사2": 0, "영양사3": 2, "영양사4": 1, "영양사5": 0},
-      {"mealDate":"2024-02-13", "영양사1": 0, "영양사2": 0, "영양사3": 0, "영양사4": 0, "영양사5": 0},
-      {"mealDate":"2024-02-14", "영양사1": 0, "영양사2": 0, "영양사3": 0, "영양사4": 0, "영양사5": 0},
-  
-    ];
-    */
-
-    // query by mealDate from feeds table and group by feedbackWriterNickname
-    // feddbackYn is 'Y'
-
-
-      /*
-    MongoServerError: The field 'mealDate' must be an accumulator object
-    */
 
     const client = await clientPromise;
     const collection = client.db('vienna').collection('feeds');
@@ -5800,30 +5245,6 @@ export async function getStats( {
       
 
 
-    
-
-
-
-    
-    results.forEach((result: any) => {
-        
-      const feedbackWriterId = result._id;
-
-      const feedbackWriter = feedbackWriters.find((feedbackWriter: any) => feedbackWriter.id === parseInt(feedbackWriterId));
-
-      if (feedbackWriter) {
-        result.feedbackWriterNickname = feedbackWriter.nickname;
-      }
-
-    } );
-
-      
-
-
-    console.log('results: ' + JSON.stringify(results, null, 2));
-
-
-    connection.release();
   
   
     return results;
@@ -5831,7 +5252,6 @@ export async function getStats( {
 
   } catch (error) {
 
-    connection.release();
 
     console.error('getStats error: ', error);
     return [];
@@ -5916,34 +5336,10 @@ export async function getStatsAll({
 
 
 
-  const connection = await connect();
-
   try {
 
 
 
-    const query = `
-    SELECT id, nickname FROM users
-    WHERE
-    nickname IS NOT NULL
-
-    AND access->'$.access_feed' = true
-
-    ORDER BY createdAt DESC
-    `;
-
-    const values = [] as any;
-
- 
-    const [rows, fields] = await connection.query(query, values) as any
-
-
-
-    console.log('rows: ' + JSON.stringify(rows, null, 2));
-
-
-
-    connection.release();
 
 
 
@@ -6055,23 +5451,6 @@ export async function getStatsAll({
 
 
 
-      results.forEach((result: any) => {
-
-      
-        const feedbackWriterId = result._id;
-
-        const feedbackWriter = rows.find((feedbackWriter: any) => feedbackWriter.id === parseInt(feedbackWriterId));
-
-
-        ///console.log('feedbackWriter: ' + JSON.stringify(feedbackWriter, null, 2));
-
-
-
-        if (feedbackWriter) {
-          result.feedbackWriterNickname = feedbackWriter.nickname;
-        }
-
-      } );
 
 
 
@@ -6174,7 +5553,6 @@ export async function getStatsAll({
 
   } catch (error) {
 
-    connection.release();
     console.error(' error: ', error);
     return {
       "data" : [],
@@ -6217,28 +5595,8 @@ export async function getStatsAllDownload({
  
 
 
-  const connection = await connect();
-
   try {
 
-
-
-    const query = `
-    SELECT * FROM users
-    WHERE
-    nickname IS NOT NULL
-
-    AND access->'$.access_feed' = true
-
-    ORDER BY createdAt DESC
-    `;
-
-    const values = [] as any;
-
- 
-    const [rows, fields] = await connection.query(query, values) as any
-
-    connection.release();
 
 
 
@@ -6352,18 +5710,6 @@ export async function getStatsAllDownload({
 
 
 
-      results.forEach((result: any) => {
-
-      
-        const feedbackWriterId = result._id;
-
-        const feedbackWriter = rows.find((feedbackWriter: any) => feedbackWriter.id === parseInt(feedbackWriterId));
-
-        if (feedbackWriter) {
-          result.feedbackWriterNickname = feedbackWriter.nickname;
-        }
-
-      } );
 
 
 
@@ -6467,7 +5813,6 @@ export async function getStatsAllDownload({
 
   } catch (error) {
 
-    connection.release();
     console.error(' error: ', error);
     return {
       "data" : [],

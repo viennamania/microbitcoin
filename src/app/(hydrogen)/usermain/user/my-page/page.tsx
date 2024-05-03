@@ -443,21 +443,6 @@ export default function ProfileEditPage() {
   
   <div className="self-stretch flex flex-row flex-wrap items-center justify-between ml-5 mr-5">
 
-    
-
-    {/*
-    <Link 
-        href={'/'}
-        className="h-[60px]  flex flex-col items-center justify-center p-2.5 box-border gap-[4px]   text-dark">
-      <img
-        className="w-6 h-6 relative overflow-hidden shrink-0"
-        loading="eager"
-        alt=""
-        src="/homefill.svg"
-      />
-      <b className="relative">홈</b>
-    </Link>
-    */}
 
     <Link 
         href={'/'}
@@ -468,35 +453,8 @@ export default function ProfileEditPage() {
         alt=""
         src="/homeline.svg"
       />
-      <b className="relative">홈</b>
+      <b className="relative">Home</b>
     </Link>
-
-
-      {/*
-    <div className="h-[60px] flex-1 flex flex-col items-center justify-center p-2.5 box-border gap-[4px]   text-dark">
-      <input
-        className="m-0 w-6 h-6 relative overflow-hidden shrink-0"
-        type="checkbox"
-      />
-      <b className="relative">홈</b>
-    </div>
-        */}
-
-
-    {/*
-    <Link
-        href={'/usermain/feeds'}
-        className="h-[60px] flex-1 flex flex-col items-center justify-center p-2.5 box-border gap-[4px]  ">
-      <img
-        className="w-6 h-6 relative overflow-hidden shrink-0"
-        loading="eager"
-        alt=""
-        src="/newspaperline.svg"
-      />
-      <div className="relative">피드</div>
-    </Link>
-    */}
-
 
     <Link 
         href={'/usermain/feeds'}

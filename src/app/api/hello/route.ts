@@ -10,12 +10,13 @@
 
 
 
-import pool from '@/config/db';
+///import pool from '@/config/db';
 
 export async function GET(_request: Request) {
     // Do whatever you want
 
 
+    /*
     try {
 
       const result = await pool.query('SELECT * FROM users');
@@ -24,7 +25,7 @@ export async function GET(_request: Request) {
     } catch (err) {
       console.error(err);
     }
-
+    */
 
 
 
