@@ -139,9 +139,6 @@
     "rimraf": "^5.0.5",
     "tailwindcss": "^3.3.5"
   },
-  "engines": {
-    "node": ">=18.15.0"
-  },
   "readme": "ERROR: No README data found!",
   "_id": "isomorphic-furyroad@0.0.1"
 }
