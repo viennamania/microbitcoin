@@ -100,7 +100,7 @@ const HabitContainer: NextPage = () => {
           </div>
 
           <div className="self-stretch relative text-sm xl:text-xl font-menu-off text-grey-6 text-center">
-            {userData?.nickname}님의 맞춤서비스 이용을 위해 설문을 완료해 주세요.
+            Please complete the survey to use our customized service.
           </div>
         </div>
         :
@@ -136,7 +136,7 @@ const HabitContainer: NextPage = () => {
 
                 <div className="flex flex-col items-center justify-center gap-[0px]">
                   
-                  <div className="relative text-sm ">What you eat, what you are!</div>
+                  <div className="relative text-sm ">Show me the money!</div>
 
                   <div className="mt-3 relative text-xl  xl:text-9xl text-dark">
 

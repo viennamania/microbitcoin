@@ -443,7 +443,7 @@ export default function ProfileEditPage() {
 
   
 
-      toast.success("프로필이 수정되었습니다.");
+      toast.success("Updated successfully!");
       
 
     
@@ -542,7 +542,7 @@ export default function ProfileEditPage() {
 
             <div className="self-stretch flex flex-col items-center justify-start">
               <Top1
-                logo="/usermain/images/logo1.svg"
+                logo="/usermain/images/logo.png"
                 topBackgroundColor="#fff"
                 topBorderBottom="1px solid #ddd"
                 topBoxSizing="border-box"
@@ -622,7 +622,7 @@ export default function ProfileEditPage() {
                                 alt=""
                                 src="/usermain/images/back.svg"
                               />
-                              <div className="relative">뒤로</div>
+                              <div className="relative">Back</div>
                             
 
                           </div>
@@ -645,11 +645,11 @@ export default function ProfileEditPage() {
                       <>
 
                         <div className="self-stretch relative text-lg fong-bold">
-                          {userEmail}님 환영합니다.
+                          Welcome {userEmail}.
                         </div>
                         
                         <div className="self-stretch relative font-extrabold">
-                          프로필을 완성해 주세요.
+                          Complete your profile.
                         </div>
                       </>
                       
@@ -663,7 +663,7 @@ export default function ProfileEditPage() {
                     <div className=" w-full  xl:w-[400px] flex flex-col items-center justify-center text-left text-sm">
 
                       <div className=" font-extrabold text-xl xl:text-13xl text-dark">
-                        프로필 수정
+                        Edit Profile
                       </div>
 
 
@@ -695,7 +695,7 @@ export default function ProfileEditPage() {
 
                         <div className="self-stretch flex flex-col items-start justify-center gap-[8px]">
                           <div className="self-stretch relative font-extrabold">
-                            <span>닉네임</span>
+                            <span>Nickname</span>
                             <span className="text-red">*</span>
                           </div>
   
@@ -703,7 +703,11 @@ export default function ProfileEditPage() {
                             type="text"
                             size="lg"
                             //label="닉네임"
-                            placeholder="10자이내 영문,한글"
+                            
+                            //placeholder="10자이내 영문,한글"
+
+                            placeholder="Enter your nickname"
+
                             //className="[&>label>span]:font-medium"
                             className="w-full"
                             value={userNickname}
@@ -716,7 +720,7 @@ export default function ProfileEditPage() {
 
                         <div className="self-stretch flex flex-col items-start justify-center gap-[8px]">
                           <div className="self-stretch relative font-extrabold">
-                            <span>휴대폰</span>
+                            <span>Mobile Number</span>
                             <span className="text-red">*</span>
                           </div>
      
@@ -727,7 +731,11 @@ export default function ProfileEditPage() {
                             type="text"
                             size="lg"
                             //label="닉네임"
-                            placeholder="'-'없이 입력하세요."
+                            
+                            //placeholder="'-'없이 입력하세요."
+                            // enter mobile number without '-'
+                            placeholder="Enter your mobile number without '-'"
+
                             ///className="[&>label>span]:font-medium"
                             className="w-full"
                             value={userMobile}
@@ -750,7 +758,7 @@ export default function ProfileEditPage() {
                         </div>
 
 
-
+                        {/*
 
                         <div className="self-stretch flex flex-col items-start justify-center gap-[8px]">
                           <div className="self-stretch relative font-extrabold">
@@ -828,21 +836,15 @@ export default function ProfileEditPage() {
 
 
                         </div>
+                        */}
 
-
+                        {/*
                         <div className="self-stretch flex flex-col items-start justify-center gap-[8px]">
                           <div className="self-stretch relative font-extrabold">
                             <span>성별</span>
                             <span className="text-red">*</span>
                           </div>
-                          
-
-                          {/* 성별 선택 (여성, 남성) */  }
-                                                   {/* selected={userGender}
-
-                              if userGender is '여성' then selected={userGender} */}
-
-         
+            
 
                           <RadioGroup
 
@@ -850,17 +852,6 @@ export default function ProfileEditPage() {
                               //setValue={setValue}
           
 
-                              /*
-                              setValue={(value) => {
-                                //setValue(value);
-                                ///console.log('value', value);
-
-                                setUserGender(value);
-
-
-
-                              } }
-                              */
 
                               setValue={(value) => {
                                 //setValue(value);
@@ -924,25 +915,17 @@ export default function ProfileEditPage() {
 
 
                         </div>
+                        */}
 
 
+                        {/*
                         <div className="self-stretch flex flex-col items-start justify-center gap-[8px]">
                           <div className="self-stretch relative font-extrabold">
                             <span>몸무게</span>
                             <span className="text-red">*</span>
                           </div>
                           <div className="self-stretch flex flex-row items-center justify-start gap-[8px]">
-                            {/*
-                            <InputBox
-                              prop="0"
-                              inputBoxWidth="unset"
-                              inputBoxAlignSelf="unset"
-                              //inputBoxFlexShrink="unset"
-                              //inputBoxFlex="1"
-                              //divColor="#999"
-                              //divTextAlign="right"
-                            />
-                            */}
+                       
 
                             <Input
                               type="text"
@@ -967,17 +950,7 @@ export default function ProfileEditPage() {
                             <span className="text-red">*</span>
                           </div>
                           <div className="self-stretch flex flex-row items-center justify-start gap-[8px]">
-                            {/*
-                            <InputBox
-                              prop="0"
-                              inputBoxWidth="unset"
-                              inputBoxAlignSelf="unset"
-                              //inputBoxFlexShrink="unset"
-                              //inputBoxFlex="1"
-                              //divColor="#999"
-                              ///divTextAlign="right"
-                            />
-                            */}
+                         
                             <Input
                               type="text"
                               size="lg"
@@ -992,10 +965,10 @@ export default function ProfileEditPage() {
                             <div className="relative">cm</div>
                           </div>
                         </div>
+                        */}
 
 
-
-
+                        {/*
                         <div className="self-stretch flex flex-col items-start justify-center gap-[8px]">
                           <div className="self-stretch relative font-extrabold">
                             <span>식단기록목적</span>
@@ -1054,13 +1027,6 @@ export default function ProfileEditPage() {
                                 placeholder="분류를 선택하세요."
                                 className="w-full"
 
-                                // select option by userPurpose value
-                                ////value={value}
-
-
-                             
-
-                                
                                 value = {
                                   userPurpose == '다이어트' ? '다이어트' :
                                   userPurpose == '체중증가' ? '체중증가' :
@@ -1113,7 +1079,7 @@ export default function ProfileEditPage() {
                                           
           
                         </div>
-
+                        */}
 
 
 
@@ -1127,6 +1093,7 @@ export default function ProfileEditPage() {
 
                         {/* 질병 선택 */  }
                       
+                        {/*
                         <div className="self-stretch flex flex-col items-start justify-center gap-[8px]">
                           <div className="self-stretch relative font-extrabold">
                             <span>현재 질병이 있거나 증상 개선을 위해 처방을 받아 복용중인 약이 있나요?</span>
@@ -1169,6 +1136,7 @@ export default function ProfileEditPage() {
                           </RadioGroup>
 
                         </div>
+                        */}
                         
                         
                         {/*
@@ -1177,7 +1145,7 @@ export default function ProfileEditPage() {
 
                         {/* 가족 질병 선택 */  }
 
-                        
+                        {/*
                         <div className="self-stretch flex flex-col items-start justify-center gap-[8px]">
                           <div className="self-stretch relative font-extrabold">
                             <span>부모, 형제, 자매 중 다음의 질환을 앓았거나 해당 질환으로 사망한 경우가 있나요?(뇌졸중, 심근경색, 고혈압, 당뇨병, 암)</span>
@@ -1219,19 +1187,22 @@ export default function ProfileEditPage() {
                             </div>
                           </RadioGroup>
                         </div>
-                        
+                        */}
 
 
 
 
                         <div className="self-stretch flex flex-col items-start justify-center gap-[8px]">
                           <div className="self-stretch relative font-extrabold">
-                            비밀번호 변경
+                            Check your password
                           </div>
 
                           <Password
                             size="lg"
-                            placeholder="비밀번호(8~15자리 영문,숫자,특수문자 혼합)"
+                            
+                            //placeholder="비밀번호(8~15자리 영문,숫자,특수문자 혼합)"
+                            placeholder="Enter your password"
+
                             className="w-full"
                             inputClassName="text-xs xl:text-base pl-5"
 
@@ -1276,7 +1247,9 @@ export default function ProfileEditPage() {
                                   if (!re.test(e.target.value)) {
                                     setPasswordError(true);
     
-                                    setPasswordErrorMessage("비밀번호는 8~12자리 영문,숫자,특수문자 혼합");
+                                    //setPasswordErrorMessage("비밀번호는 8~12자리 영문,숫자,특수문자 혼합");
+
+                                    setPasswordErrorMessage("Password must be 8~12 characters long with a mix of letters, numbers, and special characters.");
     
     
                                   } else {
@@ -1299,7 +1272,7 @@ export default function ProfileEditPage() {
 
                           <Password
                             size="lg"
-                            placeholder="비밀번호 재입력"
+                            placeholder="Repeat your password"
                             className="w-full"
                             inputClassName="text-xs xl:text-base pl-5"
 
@@ -1324,7 +1297,7 @@ export default function ProfileEditPage() {
 
                                       // show error message
 
-                                      setPasswordErrorMessage("비밀번호가 일치하지 않습니다.");
+                                      setPasswordErrorMessage("Does not match the password");
 
                                     } else {
 
@@ -1428,14 +1401,14 @@ export default function ProfileEditPage() {
 
                                   if (passwordError) {
                                     toast.error(
-                                      '비밀번호를 확인해주세요.',
+                                      'Check your password.',
                                       {
                                         //position: 'top-right',
                                       }
                                     );
                                   } else if (password !== passwordConfirm) {
                                     toast.error(
-                                      '비밀번호를 확인해주세요.',
+                                      'Does not match the password.',
                                       {
                                         //position: 'top-right',
                                       }
@@ -1454,7 +1427,7 @@ export default function ProfileEditPage() {
                           >
 
          
-                          저장
+                          Save
 
                         </Button>
 
@@ -1469,7 +1442,7 @@ export default function ProfileEditPage() {
                         className="mt-10  underline text-sm text-dark"
                         href="/usermain/user/withdrawal"
                       >
-                        탈퇴하기
+                        Withdrawal
                       </Link>
 
                     </div>

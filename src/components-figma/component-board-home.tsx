@@ -239,7 +239,7 @@ const ComponentBoardHome: NextPage = () => {
                 className=" no-underline flex"
               >
 
-                <Goto boardName="Free Boards" />
+                <Goto boardName="Posts" />
 
               </Link>
             </motion.div>

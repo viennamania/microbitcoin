@@ -22,10 +22,10 @@ const Component8: NextPage = () => {
           <div className="flex flex-col items-center justify-center gap-[24px]">
             <div className="flex flex-col items-center justify-end gap-[12px]">
               <div className="self-stretch relative tracking-[0.1em] uppercase font-black">
-                What you eat, what you are!
+                Show me the money!
               </div>
               <div className="self-stretch relative text-13xl font-extrabold font-menu-off text-dark">
-                먹방으로 나의 세계관을 알아보세요!
+                Take a survey
               </div>
             </div>
 

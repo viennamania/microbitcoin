@@ -444,7 +444,7 @@ export default function SurveyResultPage({ params }: any) {
     <div className="bg-dark sticky top-0 z-50 ">
   
     <Top1
-            logo="/usermain/images/logo1.svg"
+            logo="/usermain/images/logo.png"
             topBackgroundColor="#fff"
             topBorderBottom="1px solid #ddd"
             topBoxSizing="border-box"
@@ -488,9 +488,9 @@ export default function SurveyResultPage({ params }: any) {
               <div className="self-stretch flex flex-col items-center justify-end gap-[20px] text-left text-sm text-grey-6 font-menu-off">
 
               <div className="self-stretch flex flex-col items-center justify-end gap-[8px]">
-                <div className="self-stretch relative">What you eat, what you are!</div>
+                <div className="self-stretch relative">Show me the money!</div>
                 <div className="self-stretch relative text-xl xl:text-5xl font-extrabold text-dark">
-                  먹방으로 나의 세계관을 알아보세요!
+                  Take a survey
                 </div>
               </div>
 

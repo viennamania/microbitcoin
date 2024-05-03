@@ -70,7 +70,7 @@ export default function SearchTablePage() {
         getColumns={getColumns}
         enablePagination
         enableSearch={true}
-        //searchPlaceholder="닉네임, 계정, 휴대폰번호"
+        //searchPlaceholder="Nickname, ID"
 
         //className="min-h-[480px] [&_.widget-card-header]:items-center [&_.widget-card-header_h5]:font-medium"
       />

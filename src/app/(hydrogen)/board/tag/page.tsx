@@ -85,7 +85,7 @@ export default function SearchTablePage() {
         enablePagination={true}
         
         enableSearch={false}
-        searchPlaceholder="닉네임, 계정, 휴대폰번호"
+        searchPlaceholder="Nickname, ID"
 
         //setPageSize={setPageSize}
 

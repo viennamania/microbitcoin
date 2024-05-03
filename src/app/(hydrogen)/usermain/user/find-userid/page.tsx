@@ -222,7 +222,7 @@ const Frame13: NextPage = () => {
           <div className="relative bg-white w-full overflow-hidden flex flex-col items-center justify-start text-center text-13xl text-dark font-menu-off">
             <div className="self-stretch flex flex-col items-center justify-start">
               <Top1
-                logo="/usermain/images/logo1.svg"
+                logo="/usermain/images/logo.png"
                 topBackgroundColor="#fff"
                 topBorderBottom="1px solid #ddd"
                 topBoxSizing="border-box"
@@ -570,7 +570,7 @@ const Frame13: NextPage = () => {
                           {userData?.regType === 'email' && (
                             <div className="self-stretch flex flex-col items-start justify-center gap-[8px]">
                               <div className="self-stretch relative">
-                                회원님은 이메일로 가입하셨습니다.
+                                signed up with my email.
                               </div>
                               <div className="self-stretch relative text-xl font-extrabold">
                                 {userData?.email}

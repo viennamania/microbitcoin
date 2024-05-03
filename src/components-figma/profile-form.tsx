@@ -337,7 +337,7 @@ const ProfileForm: NextPage = () => {
     <div className="self-stretch bg-white flex flex-col items-center justify-end gap-[40px] text-left text-xl text-dark1 font-h3">
       <div className="self-stretch flex flex-col items-start justify-center gap-[20px]">
         <div className="self-stretch flex flex-row items-center justify-center gap-[8px]">
-          <div className="flex-1 relative font-extrabold">프로필</div>
+          <div className="flex-1 relative font-extrabold">Profile</div>
           
           
           <Link
@@ -346,7 +346,7 @@ const ProfileForm: NextPage = () => {
 
             className="flex flex-row items-center justify-center gap-[4px] text-sm">
 
-            <div className="relative">프로필 수정</div>
+            <div className="relative">Edit Profile</div>
 
             <Image
               width="24"
@@ -367,7 +367,7 @@ const ProfileForm: NextPage = () => {
 
           {loadingUser ? (
             <div className="self-stretch relative font-extrabold">
-              로딩중...
+              Loading...
             </div>
           ) : (
             <>
@@ -396,7 +396,7 @@ const ProfileForm: NextPage = () => {
             <div className="self-stretch relative font-extrabold flex flex-col items-start justify-center gap-2">
 
               <div className="relative">
-                {user?.nickname}님의 맞춤서비스 이용을 위해 설문을 완료해 주세요.
+                Please complete the survey to use our customized service.
               </div>
               <Link
 
@@ -404,7 +404,7 @@ const ProfileForm: NextPage = () => {
 
                 className="flex flex-row items-center justify-center gap-[4px] text-sm">
 
-                <div className="relative">먹방으로 나의 세계관을 알아보세요!</div>
+                <div className="relative">Take a survey</div>
 
                 <Image
                   width="24"
@@ -430,12 +430,14 @@ const ProfileForm: NextPage = () => {
       </div>
       <div className="self-stretch flex flex-col items-start justify-center gap-[20px]">
         <div className="self-stretch flex flex-row items-center justify-center gap-[8px]">
-          <div className="flex-1 relative font-extrabold">나의 활동 현황</div>
+          <div className="flex-1 relative font-extrabold">Activity status</div>
 
           <Link
             href={'/usermain/points'}
             className="flex flex-row items-center justify-center gap-[4px] text-sm">
-            <div className="relative">포인트 내역보기</div>
+            <div className="relative">
+              Point History
+            </div>
             <Image
               width="24"
               height="24"
@@ -460,7 +462,7 @@ const ProfileForm: NextPage = () => {
                 src="/usermain/images/logoutboxrline.svg"
               />
               <div className="relative flex items-center w-20 shrink-0">
-                출석
+                Attendance
               </div>
               <div className="flex-1 relative font-extrabold text-dark1 text-right">
                 {attendanceCount}회
@@ -474,10 +476,10 @@ const ProfileForm: NextPage = () => {
                alt=""
                src="/usermain/images/annotation.svg" />
               <div className="relative flex items-center w-20 shrink-0">
-                피드
+                Feeds
               </div>
               <div className="flex-1 relative font-extrabold text-dark1 text-right">
-                {feedCount}건
+                {feedCount}
               </div>
             </div>
             <div className="self-stretch flex flex-row items-center justify-start gap-[4px]">
@@ -489,10 +491,10 @@ const ProfileForm: NextPage = () => {
                 src="/usermain/images/message3line.svg"
               />
               <div className="relative flex items-center w-20 shrink-0">
-                댓글
+                Comments
               </div>
               <div className="flex-1 relative font-extrabold text-dark1 text-right">
-                {commentCount}건
+                {commentCount}
               </div>
             </div>
             <div className="self-stretch flex flex-row items-center justify-start gap-[4px]">
@@ -509,10 +511,10 @@ const ProfileForm: NextPage = () => {
               />
 
               <div className="relative flex items-center w-20 shrink-0">
-                좋아요
+                Likes
               </div>
               <div className="flex-1 relative font-extrabold text-dark1 text-right">
-                {likeCount}건
+                {likeCount} 
               </div>
             </div>
           </div>
@@ -528,12 +530,12 @@ const ProfileForm: NextPage = () => {
                   alt=""
                   src="/usermain/images/coinline.svg"
                 />
-                <div className="self-stretch relative">포인트</div>
+                <div className="self-stretch relative">Points</div>
               </div>
 
               {loadingPoint ? (
                 <div className="self-stretch relative font-extrabold">
-                  로딩중...
+                  Loading...
                 </div>
               ) : (
                 <div className="self-stretch relative font-extrabold text-13xl text-dark1">

@@ -28,7 +28,7 @@ const menuItems = [
 
   
   {
-    name: '프로필',
+    name: 'Profile',
     //href: routes.usermain.myProfileEdit,
     href: routes.usermain.myPage,
   },
@@ -129,7 +129,7 @@ function DropdownMenu() {
             { callbackUrl: '/signin' }
           )}
         >
-          로그아웃
+          Logout
         </Button>
       </div>
 

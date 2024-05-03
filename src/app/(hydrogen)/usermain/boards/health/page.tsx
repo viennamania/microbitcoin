@@ -228,7 +228,7 @@ export default function HealthInfoPage() {
 
           <div className="bg-dark felx sticky top-0 z-50 ">
               <Top1
-                logo="/usermain/images/logo1.svg"
+                logo="/usermain/images/logo.png"
                 topBackgroundColor="#fff"
                 topBorderBottom="1px solid #ddd"
                 topBoxSizing="border-box"
@@ -476,7 +476,7 @@ export default function HealthInfoPage() {
                     {
                       loading === false && searchResults.length === 0 ? (
                         <div className="w-full h-60 self-stretch flex flex-col items-center justify-center gap-[20px] z-[1] text-left text-dark">
-                            <div className="text-base">검색 결과가 없습니다.</div>
+                            <div className="text-base">No results.</div>
                         </div>
                         
                       ) : (
@@ -664,7 +664,7 @@ export default function HealthInfoPage() {
         alt=""
         src="/newspaperline.svg"
       />
-      <b className="relative">피드</b>
+      <b className="relative">Feeds</b>
     </Link>
 
 
@@ -678,7 +678,7 @@ export default function HealthInfoPage() {
         alt=""
         src="/piechart2line.svg"
       />
-      <b className="relative">통계</b>
+      <b className="relative">Stats</b>
     </Link>
 
     
@@ -701,7 +701,7 @@ export default function HealthInfoPage() {
         alt=""
         src="/piechart2fill.svg"
       />
-      <b className="relative">통계</b>
+      <b className="relative">Stats</b>
     </div>
     */}
 
@@ -716,7 +716,7 @@ export default function HealthInfoPage() {
         alt=""
         src="/message2fill.svg"
       />
-      <b className="relative">게시판</b>
+      <b className="relative">Posts</b>
     </Link>
     {/*
     <Link
@@ -738,7 +738,7 @@ export default function HealthInfoPage() {
         alt=""
         src="/message2fill.svg"
       />
-      <b className="relative">게시판</b>
+      <b className="relative">Posts</b>
     </div>
     */}
 
@@ -753,7 +753,7 @@ export default function HealthInfoPage() {
         alt=""
         src="/questionanswerline.svg"
       />
-      <b className="relative">설문</b>
+      <b className="relative">Survey</b>
     </Link>
     
     {/*
@@ -774,7 +774,7 @@ export default function HealthInfoPage() {
         alt=""
         src="/questionanswerfill.svg"
       />
-      <b className="relative">설문</b>
+      <b className="relative">Survey</b>
     </div>
     */}
 
@@ -788,7 +788,7 @@ export default function HealthInfoPage() {
         alt=""
         src="/usersettingsline.svg"
       />
-      <b className="relative">마이</b>
+      <b className="relative">My</b>
     </Link>
 
     {/*
@@ -809,7 +809,7 @@ export default function HealthInfoPage() {
         alt=""
         src="/usersettingsfill.svg"
       />
-      <b className="relative">마이</b>
+      <b className="relative">My</b>
     </div>
     */}
 

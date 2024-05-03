@@ -49,44 +49,27 @@ export const menuItems = [
 
 
   {
-    name: '피드',
+    name: 'Feeds',
     href: '#',
     icon: <PiFolder />,
     dropdownItems: [
       {
-        name: '전체 Feed',
+        name: 'Total',
         href: routes.usermain.feeds,
       },
       {
-        name: '관심 Feed',
+        name: 'Interest',
         href: routes.usermain.feedsInterest,
       },
       {
-        name: '나의 Feed',
+        name: 'Mine',
         href: routes.usermain.feedsMy,
       },
     ],
   },
 
-  /*
   {
-    name: '통계',
-    href: '#',
-    icon: <PiFolder />,
-    dropdownItems: [
-      {
-        name: '일간',
-        href: routes.feed.index,
-      },
-      {
-        name: '주간/월간/전체',
-        href: routes.feed.stats,
-      },
-    ],
-  },
-  */
-  {
-    name: '게시판',
+    name: 'Posts',
     href: '#',
     icon: <PiFolder />,
     dropdownItems: [
@@ -115,7 +98,7 @@ export const menuItems = [
   },
 
   {
-    name: '통계',
+    name: 'Stats',
     href: '#',
     icon: <PiFolder />,
     dropdownItems: [
@@ -133,7 +116,7 @@ export const menuItems = [
 
   
   {
-    name: '설문',
+    name: 'Survey',
     href: '#',
     icon: <PiFolder />,
     dropdownItems: [

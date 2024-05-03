@@ -220,7 +220,7 @@ export default function FaqPage() {
 
     <div className="bg-dark felx sticky top-0 z-50 ">
             <Top1
-              logo="/usermain/images/logo1.svg"
+              logo="/usermain/images/logo.png"
               topBackgroundColor="#fff"
               topBorderBottom="1px solid #ddd"
               topBoxSizing="border-box"
@@ -767,7 +767,7 @@ export default function FaqPage() {
         alt=""
         src="/newspaperline.svg"
       />
-      <b className="relative">피드</b>
+      <b className="relative">Feeds</b>
     </Link>
 
 
@@ -781,7 +781,7 @@ export default function FaqPage() {
         alt=""
         src="/piechart2line.svg"
       />
-      <b className="relative">통계</b>
+      <b className="relative">Stats</b>
     </Link>
 
     
@@ -804,7 +804,7 @@ export default function FaqPage() {
         alt=""
         src="/piechart2fill.svg"
       />
-      <b className="relative">통계</b>
+      <b className="relative">Stats</b>
     </div>
     */}
 
@@ -819,33 +819,8 @@ export default function FaqPage() {
         alt=""
         src="/message2fill.svg"
       />
-      <b className="relative">게시판</b>
+      <b className="relative">Posts</b>
     </Link>
-    {/*
-    <Link
-        href={'/usermain/boards'}
-        className="h-[60px] flex-1 flex flex-col items-center justify-center p-2.5 box-border gap-[4px]  ">
-      <img
-        className="w-6 h-6 relative overflow-hidden shrink-0"
-        loading="eager"
-        alt=""
-        src="/message2line.svg"
-      />
-      <div className="relative">게시판</div>
-    </Link>
-
-
-    <div className="h-[60px] w-[55.7px] hidden flex-col items-center justify-center p-2.5 box-border gap-[4px] text-dark">
-      <img
-        className="w-6 h-6 relative overflow-hidden shrink-0"
-        alt=""
-        src="/message2fill.svg"
-      />
-      <b className="relative">게시판</b>
-    </div>
-    */}
-
-
 
     <Link 
         href={'/usermain/survey/result'}
@@ -856,31 +831,8 @@ export default function FaqPage() {
         alt=""
         src="/questionanswerline.svg"
       />
-      <b className="relative">설문</b>
+      <b className="relative">Survey</b>
     </Link>
-    
-    {/*
-    <Link
-        href={'/usermain/surveys'}
-        className="h-[60px] flex-1 flex flex-col items-center justify-center p-2.5 box-border gap-[4px]  ">
-      <img
-        className="w-6 h-6 relative overflow-hidden shrink-0"
-        loading="eager"
-        alt=""
-        src="/questionanswerline.svg"
-      />
-      <div className="relative">설문</div>
-    </Link>
-    <div className="h-[60px] w-[65px] hidden flex-col items-center justify-center p-2.5 box-border gap-[4px] text-dark">
-      <img
-        className="w-6 h-6 relative overflow-hidden shrink-0"
-        alt=""
-        src="/questionanswerfill.svg"
-      />
-      <b className="relative">설문</b>
-    </div>
-    */}
-
 
     <Link 
         href={'/usermain/user/my-page'}
@@ -891,7 +843,7 @@ export default function FaqPage() {
         alt=""
         src="/usersettingsline.svg"
       />
-      <b className="relative">마이</b>
+      <b className="relative">My</b>
     </Link>
 
     {/*
@@ -912,7 +864,7 @@ export default function FaqPage() {
         alt=""
         src="/usersettingsfill.svg"
       />
-      <b className="relative">마이</b>
+      <b className="relative">My</b>
     </div>
     */}
 

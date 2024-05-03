@@ -303,7 +303,7 @@ export default function MyBoardPage() {
 
       <div className="bg-dark felx sticky top-0 z-50 ">
               <Top1
-                logo="/usermain/images/logo1.svg"
+                logo="/usermain/images/logo.png"
                 topBackgroundColor="#fff"
                 topBorderBottom="1px solid #ddd"
                 topBoxSizing="border-box"
@@ -540,7 +540,7 @@ export default function MyBoardPage() {
                   {
                     loading === false && searchResults.length === 0 ? (
                       <div className="w-full h-60 self-stretch flex flex-col items-center justify-center gap-[20px] z-[1] text-left text-dark">
-                          <div className="text-base">검색 결과가 없습니다.</div>
+                          <div className="text-base">No results.</div>
                       </div>
                       
                     ) : (

@@ -216,7 +216,7 @@ export default function ProfileEditPage() {
 
       <div className="self-stretch flex flex-col items-center justify-start">
         <Top1
-          logo="/usermain/images/logo1.svg"
+          logo="/usermain/images/logo.png"
           topBackgroundColor="#fff"
           topBorderBottom="1px solid #ddd"
           topBoxSizing="border-box"
@@ -271,8 +271,7 @@ export default function ProfileEditPage() {
                 className="self-stretch flex flex-row items-center justify-center pb-5 gap-[12px] z-[0] text-left text-sm text-dark font-menu-off border-b-[1px] border-solid border-grey-e"
               >
 
-                회원가입
-
+                Sign Up
 
                 <Image
                   width="24"
@@ -288,11 +287,11 @@ export default function ProfileEditPage() {
                 <>
 
                   <div className="self-stretch relative text-lg fong-bold">
-                    {userEmail}님 환영합니다.
+                    Welcome {userEmail}
                   </div>
                   
                   <div className="self-stretch relative font-extrabold">
-                    프로필을 완성해 주세요.
+                    Complete your profile.
                   </div>
                 </>
                 

@@ -69,7 +69,7 @@ const TabBar: NextPage = () => {
             alt=""
             src="/newspaperfill.svg"
           />
-          <b className="relative">피드</b>
+          <b className="relative">Feeds</b>
         </Link>
 
 
@@ -83,7 +83,7 @@ const TabBar: NextPage = () => {
             alt=""
             src="/piechart2fill.svg"
           />
-          <b className="relative">통계</b>
+          <b className="relative">Stats</b>
         </Link>
 
         
@@ -106,7 +106,7 @@ const TabBar: NextPage = () => {
             alt=""
             src="/piechart2fill.svg"
           />
-          <b className="relative">통계</b>
+          <b className="relative">Stats</b>
         </div>
         */}
 
@@ -121,7 +121,7 @@ const TabBar: NextPage = () => {
             alt=""
             src="/message2fill.svg"
           />
-          <b className="relative">게시판</b>
+          <b className="relative">Posts</b>
         </Link>
         {/*
         <Link
@@ -143,7 +143,7 @@ const TabBar: NextPage = () => {
             alt=""
             src="/message2fill.svg"
           />
-          <b className="relative">게시판</b>
+          <b className="relative">Posts</b>
         </div>
         */}
 
@@ -158,7 +158,7 @@ const TabBar: NextPage = () => {
             alt=""
             src="/questionanswerfill.svg"
           />
-          <b className="relative">설문</b>
+          <b className="relative">Survey</b>
         </Link>
         
         {/*
@@ -179,7 +179,7 @@ const TabBar: NextPage = () => {
             alt=""
             src="/questionanswerfill.svg"
           />
-          <b className="relative">설문</b>
+          <b className="relative">Survey</b>
         </div>
         */}
 
@@ -193,7 +193,7 @@ const TabBar: NextPage = () => {
             alt=""
             src="/usersettingsfill.svg"
           />
-          <b className="relative">마이</b>
+          <b className="relative">My</b>
         </Link>
 
         {/*
@@ -214,7 +214,7 @@ const TabBar: NextPage = () => {
             alt=""
             src="/usersettingsfill.svg"
           />
-          <b className="relative">마이</b>
+          <b className="relative">My</b>
         </div>
         */}
 

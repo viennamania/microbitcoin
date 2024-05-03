@@ -87,7 +87,7 @@ export default function SearchTablePage() {
         getColumns={getColumns}
         enablePagination={true}
         
-        searchPlaceholder="닉네임, 제목, 피드백 작성자"
+        searchPlaceholder="Nickname, title"
 
         ////setPageSize={setPageSize}
 

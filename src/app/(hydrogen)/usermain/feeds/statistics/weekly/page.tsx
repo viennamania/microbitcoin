@@ -1127,7 +1127,7 @@ useEffect(() => {
 
       <div className="bg-dark sticky top-0 z-50 ">
       <Top1
-            logo="/usermain/images/logo1.svg"
+            logo="/usermain/images/logo.png"
             topBackgroundColor="#fff"
             topBorderBottom="1px solid #ddd"
             topBoxSizing="border-box"
@@ -1774,7 +1774,7 @@ useEffect(() => {
         alt=""
         src="/newspaperline.svg"
       />
-      <b className="relative">피드</b>
+      <b className="relative">Feeds</b>
     </Link>
 
 
@@ -1788,7 +1788,7 @@ useEffect(() => {
         alt=""
         src="/piechart2fill.svg"
       />
-      <b className="relative">통계</b>
+      <b className="relative">Stats</b>
     </Link>
 
     
@@ -1811,7 +1811,7 @@ useEffect(() => {
         alt=""
         src="/piechart2fill.svg"
       />
-      <b className="relative">통계</b>
+      <b className="relative">Stats</b>
     </div>
     */}
 
@@ -1826,7 +1826,7 @@ useEffect(() => {
         alt=""
         src="/message2line.svg"
       />
-      <b className="relative">게시판</b>
+      <b className="relative">Posts</b>
     </Link>
     {/*
     <Link
@@ -1848,7 +1848,7 @@ useEffect(() => {
         alt=""
         src="/message2fill.svg"
       />
-      <b className="relative">게시판</b>
+      <b className="relative">Posts</b>
     </div>
     */}
 
@@ -1863,7 +1863,7 @@ useEffect(() => {
         alt=""
         src="/questionanswerline.svg"
       />
-      <b className="relative">설문</b>
+      <b className="relative">Survey</b>
     </Link>
     
     {/*
@@ -1884,7 +1884,7 @@ useEffect(() => {
         alt=""
         src="/questionanswerfill.svg"
       />
-      <b className="relative">설문</b>
+      <b className="relative">Survey</b>
     </div>
     */}
 
@@ -1898,7 +1898,7 @@ useEffect(() => {
         alt=""
         src="/usersettingsline.svg"
       />
-      <b className="relative">마이</b>
+      <b className="relative">My</b>
     </Link>
 
     {/*
@@ -1919,7 +1919,7 @@ useEffect(() => {
         alt=""
         src="/usersettingsfill.svg"
       />
-      <b className="relative">마이</b>
+      <b className="relative">My</b>
     </div>
     */}
 

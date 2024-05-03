@@ -328,7 +328,11 @@ export default function Page() {
           const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
           if (!emailRegex.test(debouncedEmail)) {
-            setEmailErrorMessage("이메일 형식이 올바르지 않습니다.");
+            
+            //setEmailErrorMessage("이메일 형식이 올바르지 않습니다.");
+            setEmailErrorMessage("Invalid email format.");
+
+
             return;
           } 
 
@@ -345,7 +349,9 @@ export default function Page() {
     
           if (json?.data?.result === 'N') {
 
-            setEmailErrorMessage("가입되지 않은 이메일입니다.");
+            //setEmailErrorMessage("가입되지 않은 이메일입니다.");
+            setEmailErrorMessage("Does not exist email address.");
+
             return;
 
           } else {
@@ -580,7 +586,7 @@ export default function Page() {
             <div className="self-stretch flex flex-col items-center justify-start">
              
               <Top1
-                logo="/usermain/images/logo1.svg"
+                logo="/usermain/images/logo.png"
                 topBackgroundColor="#fff"
                 topBorderBottom="1px solid #ddd"
                 topBoxSizing="border-box"
@@ -793,7 +799,7 @@ export default function Page() {
                             <Link
                               href="/usermain/user/register"
                               className=" no-underline relative">
-                                일반 회원가입
+                                Sign Up
                             </Link>
 
 
@@ -805,7 +811,7 @@ export default function Page() {
                               href="/usermain/user/find-userid"
                               className=" no-underline relative"
                               >
-                                  아이디 찾기
+                                  Find ID
                               </Link>
                             
 
@@ -814,7 +820,7 @@ export default function Page() {
                             <Link
                               href="/usermain/user/recovery-password"
                             className=" no-underline relative">
-                              비밀번호 찾기
+                              Find Password
                             </Link>
                             
                           </div>
@@ -854,7 +860,7 @@ export default function Page() {
   
                             }}
                           >
-                            로그인
+                            Login
                           </Button>
 
                         </motion.div>
@@ -894,6 +900,7 @@ export default function Page() {
                         */}
 
                         {/* 카카오톡 로그인 버튼 */}
+                        {/*
                         <motion.div
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
@@ -929,8 +936,10 @@ export default function Page() {
                         </button>
 
                         </motion.div>
+                        */}
 
                         {/* 네이버 로그인 버튼 */}
+                        {/*
                         <motion.div
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
@@ -965,9 +974,11 @@ export default function Page() {
 
                         </button>
                         </motion.div>
+                        */}
 
 
                         {/* 구글 로그인 버튼 */}
+                        {/*
                         <motion.div
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
@@ -1009,6 +1020,7 @@ export default function Page() {
 
                         </button>
                         </motion.div>
+                        */}
                       
                       </div>
                           

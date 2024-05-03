@@ -33,7 +33,9 @@ const Footer: NextPage<FooterType> = ({
       style={footerStyle}
     >
       <div className="w-[1920px] flex flex-col items-center justify-center py-[100px] px-0 box-border gap-[32px] z-[0]">
-        <LogoIcon carDimensions="/usermain/images/logo.png" />
+        
+        
+
         <div className="flex flex-col items-center justify-center gap-[12px]">
           <div className="flex flex-row items-center justify-center gap-[12px]">
             
@@ -41,7 +43,7 @@ const Footer: NextPage<FooterType> = ({
               href="/usermain/user/terms"
               className="relative"
             >
-              이용약관
+              Terms of Use
             </Link>
 
             <div className="relative bg-white w-px h-3" />
@@ -49,7 +51,7 @@ const Footer: NextPage<FooterType> = ({
               href="/usermain/user/privacy"
               className="relative"
             >
-              개인정보처리방침
+              Privacy Policy
             </Link>
 
           </div>
@@ -67,24 +69,12 @@ Copyright ⓒ 디보이드 All Rights Reserved
           <div className="flex flex-col items-center justify-center text-xs text-grey-c">
             <div className="text-left relative leading-[20px] whitespace-pre-wrap">
 
-              <div className="flex flex-col items-start justify-start ">
-                <div className="flex flex-row items-center justify-center">
-                  <div className=" w-9 ">상호명</div><div>: OnePay</div>
-                </div>
-                <div className="flex flex-row items-center justify-center">
-                  <div className="w-9">주소</div><div>: </div>
-                </div>
-
-              </div>
-
-      
-
 
 
               <div className="flex flex-col items-start justify-start ">
 
                 <div className="flex flex-row items-center justify-center">
-                  <div className="w-9">이메일</div><div>: microbitcoin@gmail.com</div>
+                  <div className="w-9">email</div><div>: microbitcoin@gmail.com</div>
                 </div>
               </div>
 

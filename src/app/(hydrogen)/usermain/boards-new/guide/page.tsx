@@ -196,7 +196,7 @@ export default function GuidePage() {
 
           <div className="bg-dark felx sticky top-0 z-50 ">
               <Top1
-                logo="/usermain/images/logo1.svg"
+                logo="/usermain/images/logo.png"
                 topBackgroundColor="#fff"
                 topBorderBottom="1px solid #ddd"
                 topBoxSizing="border-box"
@@ -564,7 +564,7 @@ export default function GuidePage() {
         alt=""
         src="/newspaperline.svg"
       />
-      <b className="relative">피드</b>
+      <b className="relative">Feeds</b>
     </Link>
 
 
@@ -578,7 +578,7 @@ export default function GuidePage() {
         alt=""
         src="/piechart2line.svg"
       />
-      <b className="relative">통계</b>
+      <b className="relative">Stats</b>
     </Link>
 
     
@@ -601,7 +601,7 @@ export default function GuidePage() {
         alt=""
         src="/piechart2fill.svg"
       />
-      <b className="relative">통계</b>
+      <b className="relative">Stats</b>
     </div>
     */}
 
@@ -616,7 +616,7 @@ export default function GuidePage() {
         alt=""
         src="/message2fill.svg"
       />
-      <b className="relative">게시판</b>
+      <b className="relative">Posts</b>
     </Link>
     {/*
     <Link
@@ -638,7 +638,7 @@ export default function GuidePage() {
         alt=""
         src="/message2fill.svg"
       />
-      <b className="relative">게시판</b>
+      <b className="relative">Posts</b>
     </div>
     */}
 
@@ -653,7 +653,7 @@ export default function GuidePage() {
         alt=""
         src="/questionanswerline.svg"
       />
-      <b className="relative">설문</b>
+      <b className="relative">Survey</b>
     </Link>
     
     {/*
@@ -674,7 +674,7 @@ export default function GuidePage() {
         alt=""
         src="/questionanswerfill.svg"
       />
-      <b className="relative">설문</b>
+      <b className="relative">Survey</b>
     </div>
     */}
 
@@ -688,7 +688,7 @@ export default function GuidePage() {
         alt=""
         src="/usersettingsline.svg"
       />
-      <b className="relative">마이</b>
+      <b className="relative">My</b>
     </Link>
 
     {/*
@@ -709,7 +709,7 @@ export default function GuidePage() {
         alt=""
         src="/usersettingsfill.svg"
       />
-      <b className="relative">마이</b>
+      <b className="relative">My</b>
     </div>
     */}
 

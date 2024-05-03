@@ -441,7 +441,7 @@ export default function SurveyResultPage({ params }: any) {
     <div className="bg-dark sticky top-0 z-50 ">
   
     <Top1
-            logo="/usermain/images/logo1.svg"
+            logo="/usermain/images/logo.png"
             topBackgroundColor="#fff"
             topBorderBottom="1px solid #ddd"
             topBoxSizing="border-box"
@@ -485,9 +485,9 @@ export default function SurveyResultPage({ params }: any) {
               <div className="self-stretch flex flex-col items-center justify-end gap-[20px] text-left text-sm text-grey-6 font-menu-off">
 
               <div className="self-stretch flex flex-col items-center justify-end gap-[8px]">
-                <div className="self-stretch relative">What you eat, what you are!</div>
+                <div className="self-stretch relative">Show me the money!</div>
                 <div className="self-stretch relative text-xl xl:text-5xl font-extrabold text-dark">
-                  먹방으로 나의 세계관을 알아보세요!
+                  Take a survey
                 </div>
               </div>
 
@@ -763,7 +763,7 @@ export default function SurveyResultPage({ params }: any) {
               alt=""
               src="/newspaperline.svg"
             />
-            <b className="relative">피드</b>
+            <b className="relative">Feeds</b>
           </Link>
 
 
@@ -777,7 +777,7 @@ export default function SurveyResultPage({ params }: any) {
               alt=""
               src="/piechart2line.svg"
             />
-            <b className="relative">통계</b>
+            <b className="relative">Stats</b>
           </Link>
 
           
@@ -800,7 +800,7 @@ export default function SurveyResultPage({ params }: any) {
               alt=""
               src="/piechart2fill.svg"
             />
-            <b className="relative">통계</b>
+            <b className="relative">Stats</b>
           </div>
           */}
 
@@ -815,7 +815,7 @@ export default function SurveyResultPage({ params }: any) {
               alt=""
               src="/message2line.svg"
             />
-            <b className="relative">게시판</b>
+            <b className="relative">Posts</b>
           </Link>
           {/*
           <Link
@@ -837,7 +837,7 @@ export default function SurveyResultPage({ params }: any) {
               alt=""
               src="/message2fill.svg"
             />
-            <b className="relative">게시판</b>
+            <b className="relative">Posts</b>
           </div>
           */}
 
@@ -852,7 +852,7 @@ export default function SurveyResultPage({ params }: any) {
               alt=""
               src="/questionanswerfill.svg"
             />
-            <b className="relative">설문</b>
+            <b className="relative">Survey</b>
           </Link>
           
           {/*
@@ -873,7 +873,7 @@ export default function SurveyResultPage({ params }: any) {
               alt=""
               src="/questionanswerfill.svg"
             />
-            <b className="relative">설문</b>
+            <b className="relative">Survey</b>
           </div>
           */}
 
@@ -887,7 +887,7 @@ export default function SurveyResultPage({ params }: any) {
               alt=""
               src="/usersettingsline.svg"
             />
-            <b className="relative">마이</b>
+            <b className="relative">My</b>
           </Link>
 
           {/*
@@ -908,7 +908,7 @@ export default function SurveyResultPage({ params }: any) {
               alt=""
               src="/usersettingsfill.svg"
             />
-            <b className="relative">마이</b>
+            <b className="relative">My</b>
           </div>
           */}
 

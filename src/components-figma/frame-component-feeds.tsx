@@ -281,7 +281,7 @@ const FrameComponentFeeds: NextPage = () => {
         <Link
           href="/usermain/feeds"
           className=" no-underline flex-1 box-border h-14 flex flex-row items-center justify-start text-dark border-b-[2px] border-solid border-dark">
-          <div className="flex-1 relative font-extrabold">전체 Feed</div>
+          <div className="flex-1 relative font-extrabold">Total</div>
           
         </Link>
  
@@ -289,13 +289,13 @@ const FrameComponentFeeds: NextPage = () => {
         <Link
           href="/usermain/feeds/interest"
           className=" no-underline flex-1 box-border h-14 flex flex-row items-center justify-start border-b-[2px] border-solid border-orange-light">
-          <div className="flex-1 relative font-extrabold">관심 Feed</div>
+          <div className="flex-1 relative font-extrabold">Interest</div>
         </Link>
 
         <Link
           href="/usermain/feeds/my"
           className=" no-underline flex-1 box-border h-14 flex flex-row items-center justify-start border-b-[2px] border-solid border-orange-light">
-          <div className="flex-1 relative font-extrabold">나의 Feed</div>
+          <div className="flex-1 relative font-extrabold">Mine</div>
         </Link>
 
       </div>
@@ -376,7 +376,7 @@ const FrameComponentFeeds: NextPage = () => {
             {
               loading === false && searchResults.length === 0 ? (
                 <div className="w-full h-60 self-stretch flex flex-col items-center justify-center gap-[20px] z-[1] text-left text-dark">
-                    <div className="text-base">검색 결과가 없습니다.</div>
+                    <div className="text-base">No results.</div>
                 </div>
                 
               ) : (

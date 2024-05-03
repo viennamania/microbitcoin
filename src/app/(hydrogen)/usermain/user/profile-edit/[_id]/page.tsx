@@ -415,7 +415,7 @@ export default function ProfileEditPage({ params }: any) {
 
             <div className="self-stretch flex flex-col items-center justify-start">
               <Top1
-                logo="/usermain/images/logo1.svg"
+                logo="/usermain/images/logo.png"
                 topBackgroundColor="#fff"
                 topBorderBottom="1px solid #ddd"
                 topBoxSizing="border-box"
@@ -463,7 +463,7 @@ export default function ProfileEditPage({ params }: any) {
 
                         
                     <div className="self-stretch relative font-extrabold  text-2xl xl:text-3xl ">
-                      프로필을 완성해 주세요.
+                      Complete your profile.
                     </div>
               
 

@@ -362,12 +362,19 @@ const Top1: NextPage<Top1Type> = ({
               {/*
               <LogoIcon carDimensions={logo} />
               */}
-
+              {/*
               <img
                 //className="relative w-[199.5px] h-[35.3px]"
                 className="relative w-[150px]"
                 alt=""
                 src={logo}
+              />
+              */}
+              <Image
+                width="120"
+                height="120"
+                alt=""
+                src="/usermain/images/logo.png"
               />
 
             </Link>
@@ -395,7 +402,7 @@ const Top1: NextPage<Top1Type> = ({
           >
 
             <div className="flex-1 relative font-extrabold" style={div1Style}>
-                피드            
+                Feeds            
             </div>
 
           </Link>
@@ -415,7 +422,7 @@ const Top1: NextPage<Top1Type> = ({
             style={frameDiv1Style}
           >
             <div className="flex-1 relative font-extrabold" style={div2Style}>
-                통계
+                Stats
             </div>
           </Link>
           </motion.div>
@@ -433,7 +440,7 @@ const Top1: NextPage<Top1Type> = ({
             style={frameDiv2Style}
           >
             <div className="flex-1 relative font-extrabold" style={div3Style}>
-              게시판
+              Posts
             </div>
           </Link>
           </motion.div>
@@ -454,7 +461,7 @@ const Top1: NextPage<Top1Type> = ({
 
             <div className="flex-1 relative font-extrabold" style={div4Style}>
 
-                설문
+                Survey
 
             </div>
           </Link>
@@ -503,7 +510,7 @@ const Top1: NextPage<Top1Type> = ({
               
               <div className="flex flex-row items-center justify-center gap-[20px] text-7xs text-white">
                 <span className="text-white text-sm  ">
-                회원가입 중...
+                Loading...
                 </span>
                 <Link href="/usermain/user/profile-edit">
                   
@@ -593,7 +600,7 @@ const Top1: NextPage<Top1Type> = ({
 
                 >
                   <div className="relative font-extrabold" style={div5Style}>
-                    마이페이지
+                    MyPage
                   </div>
                 </button>
 
@@ -622,7 +629,7 @@ const Top1: NextPage<Top1Type> = ({
                         style={frameDiv3Style}
                       >
                         <div className="relative font-extrabold text-xs xl:text-sm " style={div6Style}>
-                          로그아웃
+                          Logout
                         </div>
                       </button>
                     ) : (
@@ -634,7 +641,7 @@ const Top1: NextPage<Top1Type> = ({
                         style={frameDiv3Style}
                       >
                         <div className="relative font-extrabold text-xs xl:text-sm " style={div6Style}>
-                          로그아웃
+                          Logout
                         </div>
                       </button>
                     )

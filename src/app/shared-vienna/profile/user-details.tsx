@@ -534,7 +534,7 @@ export default function ProfileDetails({
             enablePagination={true}
             pageSize={10}
             enableSearch={false}
-            //searchPlaceholder="닉네임, 계정, 휴대폰번호"
+            //searchPlaceholder="Nickname, ID"
 
             //////userEmail={data?.email}
 

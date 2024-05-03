@@ -10,13 +10,13 @@ const FrameComponent9: NextPage = () => {
       
       <div className="self-stretch flex flex-row items-center justify-center z-[0]">
         <div className="flex-1 box-border h-14 flex flex-row items-center justify-start text-dark border-b-[2px] border-solid border-dark">
-          <div className="flex-1 relative font-extrabold">전체 Feed</div>
+          <div className="flex-1 relative font-extrabold">Total</div>
         </div>
         <div className="flex-1 box-border h-14 flex flex-row items-center justify-start border-b-[2px] border-solid border-orange-light">
-          <div className="flex-1 relative font-extrabold">관심 Feed</div>
+          <div className="flex-1 relative font-extrabold">Interest</div>
         </div>
         <div className="flex-1 box-border h-14 flex flex-row items-center justify-start border-b-[2px] border-solid border-orange-light">
-          <div className="flex-1 relative font-extrabold">나의 Feed</div>
+          <div className="flex-1 relative font-extrabold">Mine</div>
         </div>
       </div>
 

@@ -485,7 +485,7 @@ export default function InfoForm({
                   enablePagination={true}
                   
                   enableSearch={false}
-                  searchPlaceholder="닉네임, 제목, 태그"
+                  searchPlaceholder="Nickname, title, tag"
 
                   //className=" xl:w-full min-h-[480px] [&_.widget-card-header]:items-center [&_.widget-card-header_h5]:font-medium"
 

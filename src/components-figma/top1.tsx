@@ -337,7 +337,17 @@ const Top1: NextPage<Top1Type> = ({
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
             <Link href="/">
+              {/*
               <LogoIcon carDimensions={logo} />
+              */}
+              <Image
+                width="100"
+                height="100"
+                className="object-cover"
+                alt=""
+                src="/usermain/images/logo.png"
+              />
+
             </Link>
           </motion.div>
         </div>
@@ -363,7 +373,7 @@ const Top1: NextPage<Top1Type> = ({
           >
 
             <div className="flex-1 relative font-extrabold" style={div1Style}>
-                피드            
+                Feeds            
             </div>
 
           </Link>
@@ -383,7 +393,7 @@ const Top1: NextPage<Top1Type> = ({
             style={frameDiv1Style}
           >
             <div className="flex-1 relative font-extrabold" style={div2Style}>
-                통계
+                Stats
             </div>
           </Link>
           </motion.div>
@@ -401,7 +411,7 @@ const Top1: NextPage<Top1Type> = ({
             style={frameDiv2Style}
           >
             <div className="flex-1 relative font-extrabold" style={div3Style}>
-              게시판
+              Posts
             </div>
           </Link>
           </motion.div>
@@ -422,7 +432,7 @@ const Top1: NextPage<Top1Type> = ({
 
             <div className="flex-1 relative font-extrabold" style={div4Style}>
 
-                설문
+                Survey
 
             </div>
           </Link>
@@ -567,7 +577,7 @@ const Top1: NextPage<Top1Type> = ({
 
                   >
                     <div className="relative font-extrabold" style={div5Style}>
-                      마이페이지
+                      MyPage
                     </div>
                   </button>
 
@@ -594,7 +604,7 @@ const Top1: NextPage<Top1Type> = ({
                   
                   >
                     <div className="relative font-extrabold" style={div6Style}>
-                      로그아웃
+                      Logout
                     </div>
                   </button>
                 </motion.div>
@@ -621,7 +631,7 @@ const Top1: NextPage<Top1Type> = ({
                   style={frameDiv4Style}
                 >
                   <div className="relative font-extrabold" style={div6Style}>
-                    로그인
+                    Login
                   </div>
                 </Link>
               </motion.div>

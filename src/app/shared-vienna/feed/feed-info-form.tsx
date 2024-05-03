@@ -633,7 +633,7 @@ export default function InfoForm({
                 enableSearch={false}
                 enablePagination={false}
                 
-                //searchPlaceholder="닉네임, 제목, 피드백 작성자"
+                //searchPlaceholder="Nickname, title"
 
                 className="mt-5"
 

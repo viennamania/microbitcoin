@@ -236,7 +236,7 @@ export default function ProfileEditPage() {
       <div className="self-stretch flex flex-col items-center justify-start">
 
         <Top1
-          logo="/usermain/images/logo1.svg"
+          logo="/usermain/images/logo.png"
           topBackgroundColor="#fff"
           topBorderBottom="1px solid #ddd"
           topBoxSizing="border-box"
@@ -332,7 +332,8 @@ export default function ProfileEditPage() {
 
                   regType == 'email' ? (
                     <div className="flex flex-row items-center justify-center gap-2">
-                      이메일로 가입
+                      signed up with my email.
+
                     </div>
                   ) : regType == 'kakao' ? (
                     <div className="flex flex-row items-center justify-center gap-2">
@@ -372,7 +373,7 @@ export default function ProfileEditPage() {
                     </div>
                   ) : (
                     <div className="flex flex-row items-center justify-center gap-2">
-                      이메일로 가입
+                      signed up with my email.
                     </div>
                   )
 
@@ -403,7 +404,7 @@ export default function ProfileEditPage() {
                     );
                   } }
                 >
-                  로그아웃
+                  Logout
                 </Button>
               </motion.div>
 
@@ -465,7 +466,7 @@ export default function ProfileEditPage() {
         alt=""
         src="/newspaperline.svg"
       />
-      <b className="relative">피드</b>
+      <b className="relative">Feeds</b>
     </Link>
 
 
@@ -479,7 +480,7 @@ export default function ProfileEditPage() {
         alt=""
         src="/piechart2line.svg"
       />
-      <b className="relative">통계</b>
+      <b className="relative">Stats</b>
     </Link>
 
     
@@ -502,7 +503,7 @@ export default function ProfileEditPage() {
         alt=""
         src="/piechart2fill.svg"
       />
-      <b className="relative">통계</b>
+      <b className="relative">Stats</b>
     </div>
     */}
 
@@ -517,7 +518,7 @@ export default function ProfileEditPage() {
         alt=""
         src="/message2line.svg"
       />
-      <b className="relative">게시판</b>
+      <b className="relative">Posts</b>
     </Link>
     {/*
     <Link
@@ -539,7 +540,7 @@ export default function ProfileEditPage() {
         alt=""
         src="/message2fill.svg"
       />
-      <b className="relative">게시판</b>
+      <b className="relative">Posts</b>
     </div>
     */}
 
@@ -554,7 +555,7 @@ export default function ProfileEditPage() {
         alt=""
         src="/questionanswerline.svg"
       />
-      <b className="relative">설문</b>
+      <b className="relative">Survey</b>
     </Link>
     
     {/*
@@ -575,7 +576,7 @@ export default function ProfileEditPage() {
         alt=""
         src="/questionanswerfill.svg"
       />
-      <b className="relative">설문</b>
+      <b className="relative">Survey</b>
     </div>
     */}
 
@@ -589,7 +590,7 @@ export default function ProfileEditPage() {
         alt=""
         src="/usersettingsfill.svg"
       />
-      <b className="relative">마이</b>
+      <b className="relative">My</b>
     </Link>
 
     {/*
@@ -610,7 +611,7 @@ export default function ProfileEditPage() {
         alt=""
         src="/usersettingsfill.svg"
       />
-      <b className="relative">마이</b>
+      <b className="relative">My</b>
     </div>
     */}
 

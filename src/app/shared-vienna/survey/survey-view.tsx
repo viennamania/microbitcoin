@@ -298,7 +298,7 @@ export default function InfoView({
                 sticky={true}
                 scroll={{ x: 600, }}
                 
-                //searchPlaceholder="닉네임, 제목, 피드백 작성자"
+                //searchPlaceholder="Nickname, title"
 
                 className="mt-10"
               />
