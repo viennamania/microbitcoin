@@ -70,6 +70,8 @@ const nextConfig = {
   },
   reactStrictMode: false,
 
+  swcMinify: false,
+
   // time zone for korea time
   env: {
     TZ: 'Asia/Seoul',
